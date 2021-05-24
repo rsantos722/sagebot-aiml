@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <!-- Default -->
+    <category>
+        <pattern>*</pattern>
+        <template>Sorry, I don't understand.<br></br><br></br>
+                  If this is your first time, say "hi" to begin!
+        </template>
+    </category>
+  
+  <!-- Start -->
+  <category>
+      <pattern>HI</pattern>
+      <template>Hi! I'm SageBot, and I'll help you find jobs you will enjoy in Computer Science! <br></br><br></br>
+                First, let's get to know each other. What is your name? (Use the format "My name is _________")</template>
+  </category>
+  
+<!-- Get Name and First Q -->
+  <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>
+          
+        Nice to meet you <set name = "username"><star /></set>!<br></br><br></br>
+        Next, I'll ask you three questions to help you narrow down a job. Which of these statements describe you best?
+        <card>
+            <title>Select an option.</title>
+            <subtitle>Which of these statements describe you best?</subtitle>
+            <button>
+                <text>I am a maker.</text>
+                <postback>MAKER</postback>
+            </button>
+            <button>
+                <text>I am a leader.</text>
+                <postback>LEADER</postback>
+            </button>
+        </card>
+    </template>
+  </category>
+  
+  
+  <!-- Maker Section -->
+  <category>
+      <pattern>MAKER</pattern>
+      <template>
+          
+        Awesome! It sounds like you are the type that likes to bring ideas to reality.<br></br><br></br>
+        One more question. Which of these sounds interesting to you?
+      
+        <card>
+            <title>Select an option.</title>
+            <subtitle>Which of these sounds interesting to you?</subtitle>
+            <button>
+                <text>Finding patterns.</text>
+                <postback>DATA</postback>
+            </button>
+            <button>
+                <text>Learning New Things</text>
+                <postback>FRONTEND</postback>
+            </button>
+            <button>
+                <text>Designing and Building.</text>
+                <postback>MOBILE</postback>
+            </button>
+        </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DATA</pattern>
+      <template>
+          <image>https://analyticsinsight.b-cdn.net/wp-content/uploads/2020/10/Webp.net-resizeimage-2-2.jpg</image>
+          It sounds like Data Science is for you!<br></br>
+          Data scientists analyze large sets of data to help organizations solve problems. It's all about finding patterns and trends, and drawing conclusions from them.<br></br>
+          <link>
+              <text>Click here to learn more</text>
+              <url>https://www.noodle.com/articles/data-science-jobs-whos-hiring-how-much-do-they-pay</url>
+          </link>
+          <br></br><br></br> Thanks for using SageBot!
+      </template>
+  </category>
+
+  <category>
+      <pattern>FRONTEND</pattern>
+      <template>
+          <image>https://www.nodesagency.com/wp-content/uploads/2018/12/London-employee-developer.jpg</image>
+          It sounds like Frontend Development is for you!<br></br>
+          Frontend developers create interaction and visuals within program. It's a fast moving field, so you are always learning new languages and skills!<br></br>
+          <link>
+              <text>Click here to learn more</text>
+              <url>https://www.careerexplorer.com/careers/front-end-developer/</url>
+          </link>
+          <br></br><br></br> Thanks for using SageBot!
+      </template>
+  </category>
+
+  <category>
+      <pattern>MOBILE</pattern>
+      <template>
+          <image>https://www.mobiloitte.com/blog/wp-content/uploads/2016/10/app-developers.png</image>
+          It sounds like Mobile Development is for you!<br></br>
+          Mobile developers are on the forefront of the mobile revolution. They are often multifaceted and work on a mix of frontend and backend. !<br></br>
+          <link>
+              <text>Click here to learn more</text>
+              <url>https://targetjobs.co.uk/careers-advice/job-descriptions/454119-mobile-developer-job-description</url>
+          </link>
+          <br></br><br></br> Thanks for using SageBot!
+      </template>
+  </category>
+  
+  <!-- Leader Section -->
+  <category>
+      <pattern>LEADER</pattern>
+      <template>
+        Great! It sounds like you are the type that likes to help others reach their best.<br></br><br></br>
+        One more question. Which of these sounds interesting to you?
+        <card>
+            <title>Select an option.</title>
+            <subtitle>Which of these sounds interesting to you?</subtitle>
+            <button>
+                <text>Getting multiple teams to work together in harmony.</text>
+                <postback>DEVOPS</postback>
+            </button>
+            <button>
+                <text>Steering a team of your own to success.</text>
+                <postback>PROJECT</postback>
+            </button>
+        </card>
+      </template>
+  </category>
+      
+  <category>
+      <pattern>DEVOPS</pattern>
+      <template>
+          <image>https://content.techgig.com/thumb/msid-76870402,width-860,resizemode-4/Career-as-DevOps-Engineer-Heres-all-you-need-to-know.jpg?510255</image>
+          It sounds like DevOps Enginnering is for you!<br></br>
+          DevOps can describe many roles, but the general idea is that they are the go between for development and operations. You job is to make sure that each release is the highest possible quality.<br></br>
+          <link>
+              <text>Click here to learn more</text>
+              <url>https://www.edureka.co/blog/devops-engineer-role</url>
+          </link>
+          <br></br><br></br> Thanks for using SageBot!
+      </template>
+  </category>    
+      
+      
+  <category>
+      <pattern>PROJECT</pattern>
+      <template>
+          <image>https://workfeelsgood.com/wp-content/uploads/2019/01/shutterstock_713811001_editorial-project-manager-1000x667-1.jpg</image>
+          It sounds like Project Management is for you!<br></br>
+          Project managers are responsible for keeping teams on track. They think about the big picture, and make sure everyone is motivated and productive.<br></br>
+          <link>
+              <text>Click here to learn more</text>
+              <url>https://www.betterteam.com/software-project-manager-job-description</url>
+          </link>
+          <br></br><br></br> Thanks for using SageBot!
+      </template>
+  </category>
+</aiml>
